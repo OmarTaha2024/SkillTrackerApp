@@ -3,22 +3,22 @@
 # The Skill Tracker Application is a Windows Forms-based solution designed to manage and track skills within an organization.
 # It provides features for general managers, department managers, and employees to interact with the system, enabling efficient skill assignment, tracking, and reporting.
 
-## Features
+# Features
 # General Manager Module
 # View Departments and Managers:
 # Displays all departments and their assigned managers.
 
-## Best Employee Reporting:
+# Best Employee Reporting:
 # Identifies the top-performing employee in each department based on skill proficiency.
 
-## Department Manager Module
-# User and Skill Management:
+# Department Manager Module
+ User and Skill Management:
 # View, add, update, or delete employees in their department.
 # Assign skills to employees.
 # Update or delete assigned skills.
 # Reporting:
 # Displays skill proficiency levels for all employees in the department.
-## Employee Module
+# Employee Module
 # Skill Overview:
 # View assigned skills and proficiency levels.
 # Access department-specific skill data.
