@@ -1,101 +1,96 @@
 # Skill Tracker Application
 
-Overview
+## Overview
 
 The Skill Tracker Application is a Windows Forms-based solution designed to manage and track skills within an organization. It provides features for general managers, department managers, and employees to interact with the system, enabling efficient skill assignment, tracking, and reporting.
 
-Features
+---
 
-General Manager Module
+## Features
 
-View Departments and Managers: Displays all departments and their assigned managers.
+### General Manager Module
 
-Best Employee Reporting: Identifies the top-performing employee in each department based on skill proficiency.
+- **View Departments and Managers:** Displays all departments and their assigned managers.
+- **Best Employee Reporting:** Identifies the top-performing employee in each department based on skill proficiency.
 
-Department Manager Module
+### Department Manager Module
 
-User and Skill Management:
+- **User and Skill Management:**
+  - View, add, update, or delete employees in their department.
+  - Assign skills to employees.
+  - Update or delete assigned skills.
+- **Reporting:** Displays skill proficiency levels for all employees in the department.
 
-View, add, update, or delete employees in their department.
+### Employee Module
 
-Assign skills to employees.
+- **Skill Overview:**
+  - View assigned skills and proficiency levels.
+  - Access department-specific skill data.
 
-Update or delete assigned skills.
+---
 
-Reporting: Displays skill proficiency levels for all employees in the department.
+## Technology Stack
 
-Employee Module
+- **Frontend:** Windows Forms (WinForms)
+- **Backend:** Microsoft SQL Server
+- **Programming Language:** C#
+- **Database Access:** ADO.NET
 
-Skill Overview:
+---
 
-View assigned skills and proficiency levels.
+## Project Structure
 
-Access department-specific skill data.
+- **UserSkillTrackingForm.cs:** Handles functionalities for department managers, including user and skill management within a department.
+- **GeneralManagerForm.cs:** Provides tools for general managers to view department performance and employee data.
+- **EmployeeForm.cs:** Enables employees to view their skills and proficiency levels.
 
-Technology Stack
+---
 
-Frontend: Windows Forms (WinForms)
+## Setup Instructions
 
-Backend: Microsoft SQL Server
+1. **Prerequisites:**
 
-Programming Language: C#
+   - Install Microsoft Visual Studio (2019 or later).
+   - Install SQL Server and set up the `SkillTrackerDB` database.
 
-Database Access: ADO.NET
+2. **Database Configuration:**
 
-Project Structure
+   - Ensure the `SkillTrackerDB` database is created with the required schema:
+     - Tables: `Users`, `Departments`, `Skills`, `UserSkills`.
+   - Update the connection string in the C# files to match your SQL Server instance.
 
-UserSkillTrackingForm.cs: Handles functionalities for department managers, including user and skill management within a department.
+   Example connection string:
 
-GeneralManagerForm.cs: Provides tools for general managers to view department performance and employee data.
+   ```csharp
+   private readonly string connectionString = "Data Source=.\\SQLEXPRESS01;Initial Catalog=SkillTrackerDB;Integrated Security=true";
+   ```
 
-EmployeeForm.cs: Enables employees to view their skills and proficiency levels.
+3. **Run the Application:**
 
-Setup Instructions
+   - Open the solution in Visual Studio.
+   - Build and run the project.
 
-Prerequisites:
+---
 
-Install Microsoft Visual Studio (2019 or later).
+## Usage
 
-Install SQL Server and set up the SkillTrackerDB database.
+### General Manager
 
-Database Configuration:
+1. Launch the `GeneralManagerForm`.
+2. Use the **View Departments** button to display all departments and their managers.
+3. Use the **View Best Employees** button to identify top-performing employees.
 
-Ensure the SkillTrackerDB database is created with the required schema:
+### Department Manager
 
-Tables: Users, Departments, Skills, UserSkills.
+1. Launch the `UserSkillTrackingForm`.
+2. Use the provided controls to add/update/delete users and skills within the department.
+3. Assign skills to employees and monitor their progress.
 
-Update the connection string in the C# files to match your SQL Server instance.
+### Employee
 
-Example connection string:
+1. Launch the `EmployeeForm`.
+2. View assigned skills and proficiency levels using the provided interface.
 
-private readonly string connectionString = "Data Source=.\\SQLEXPRESS01;Initial Catalog=SkillTrackerDB;Integrated Security=true";
+---
 
-Run the Application:
 
-Open the solution in Visual Studio.
-
-Build and run the project.
-
-Usage
-
-General Manager
-
-Launch the GeneralManagerForm.
-
-Use the View Departments button to display all departments and their managers.
-
-Use the View Best Employees button to identify top-performing employees.
-
-Department Manager
-
-Launch the UserSkillTrackingForm.
-
-Use the provided controls to add/update/delete users and skills within the department.
-
-Assign skills to employees and monitor their progress.
-
-Employee
-
-Launch the EmployeeForm.
-
-View assigned skills and proficiency levels using the provided interface.
